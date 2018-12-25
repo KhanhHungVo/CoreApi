@@ -1,4 +1,5 @@
 ﻿using CoreApi.Entities;
+using CoreApi.Models;
 using CoreApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
