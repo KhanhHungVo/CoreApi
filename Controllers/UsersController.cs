@@ -1,4 +1,5 @@
-﻿using CoreApi.Entities;
+﻿using CoreApi.DTOs;
+using CoreApi.Entities;
 using CoreApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -31,6 +32,13 @@ namespace CoreApi.Controllers
 
             return Ok(user);
         }
+
+        //[AllowAnonymous]
+        //[HttpPost("create")]
+        //public IActionResult Create([FromBody]UserDTO userDto)
+        //{
+
+        //}
 
         [HttpGet]
         public IActionResult GetAll()

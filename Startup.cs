@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using CoreApi.Helper;
 using CoreApi.Models;
 using CoreApi.Services;
@@ -33,7 +34,7 @@ namespace CoreApi
             services.AddCors();
             services.AddMvc();
             services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration["Database:ConnectionString1"]));
-
+            services.AddAutoMapper();
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
