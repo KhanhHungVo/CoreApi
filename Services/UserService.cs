@@ -17,10 +17,10 @@ namespace CoreApi.Services
     {
         private ApplicationDbContext _context;
         // users hardcoded for simplicity, store in a db with hashed passwords in production applications
-        private List<User> _users = new List<User>
-        {
-            new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
-        };
+        //private List<User> _users = new List<User>
+        //{
+        //    new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
+        //};
 
         private readonly AppSettings _appSettings;
 
@@ -36,12 +36,16 @@ namespace CoreApi.Services
             {
                 return null;
             }
-            var user = _context.Users.SingleOrDefault(x => x.Username == username && x.Password == password);
+            var user = _context.Users.SingleOrDefault(x => x.Username == username);
 
             // return null if user not found
             if (user == null)
                 return null;
-
+            if (!PasswordManager.VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+            {
+                return null;
+            }
+            
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
@@ -58,7 +62,7 @@ namespace CoreApi.Services
             user.Token = tokenHandler.WriteToken(token);
 
             // remove password before returning
-            user.Password = null;
+            //user.Password = null;
 
             return user;
         }
@@ -66,11 +70,7 @@ namespace CoreApi.Services
         public IEnumerable<User> GetAll()
         {
             // return users without passwords
-            return _users.Select(x =>
-            {
-                x.Password = null;
-                return x;
-            });
+            return _context.Users;
         }
 
         public User GetById(int id)
@@ -96,6 +96,39 @@ namespace CoreApi.Services
             _context.Users.Add(user);
             _context.SaveChanges();
             return user;
+        }
+
+        public void Update(User userParam,string password = null)
+        {
+            var user = _context.Users.Find(userParam.Id);
+
+            if (user == null)
+                throw new AppException("User not found");
+
+            if (userParam.Username != user.Username)
+            {
+                // username has changed so check if the new username is already taken
+                if (_context.Users.Any(x => x.Username == userParam.Username))
+                    throw new AppException("Username " + userParam.Username + " is already taken");
+            }
+
+            // update user properties
+            user.FirstName = userParam.FirstName;
+            user.LastName = userParam.LastName;
+            user.Username = userParam.Username;
+
+            // update password if it was entered
+            if (!string.IsNullOrWhiteSpace(password))
+            {
+                byte[] passwordHash, passwordSalt;
+                PasswordManager.CreatePasswordHash(password, out passwordHash, out passwordSalt);
+
+                user.PasswordHash = passwordHash;
+                user.PasswordSalt = passwordSalt;
+            }
+
+            _context.Users.Update(user);
+            _context.SaveChanges();
         }
     }
 }
