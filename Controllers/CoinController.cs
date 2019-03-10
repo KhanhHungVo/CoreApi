@@ -39,7 +39,7 @@ namespace CoreApi.Controllers
             {
                result = await responseMessage.Content.ReadAsStringAsync();
             }
-            var obj = JsonConvert.DeserializeObject(result);
+            var obj = JsonConvert.DeserializeObject<object>(result);
             return Ok(obj);
      
         }
