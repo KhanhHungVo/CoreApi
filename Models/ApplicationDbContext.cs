@@ -13,6 +13,10 @@ namespace CoreApi.Models
         {
             
         }
+
+        //Manually define list models for EF core creates table that have same name as the DBset property names
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Coin> Coins { get; set; }
     }
 }
