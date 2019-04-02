@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using CoreApi.ClientServices;
 using CoreApi.Helper;
 using CoreApi.Models;
 using CoreApi.Services;
@@ -62,6 +63,7 @@ namespace CoreApi
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            services.AddHttpClient<ICoinMarketCapClient, CoinMarketCapClient>();
 
         }
 
