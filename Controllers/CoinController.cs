@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using CoreApi.ClientServices;
+using CoreApi.DTOs.CoinMarketResModels;
 using CoreApi.Entities;
 using CoreApi.Helper;
 using Microsoft.AspNetCore.Http;
@@ -50,7 +51,7 @@ namespace CoreApi.Controllers
             {
                result = await res.Content.ReadAsStringAsync();
             }
-            var obj = JsonConvert.DeserializeObject<object>(result);
+            var obj = JsonConvert.DeserializeObject<CoinMarketRes>(result);
             return Ok(obj);
      
         }
