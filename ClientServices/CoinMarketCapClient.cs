@@ -20,7 +20,20 @@ namespace CoreApi.ClientServices
             _client = httpClient;
         }
 
-        public async Task<HttpResponseMessage> GetData()
+        // List all cryptocurrencies (latest)
+        public async Task<HttpResponseMessage> GetLatestData()
+        {
+            UriBuilder builder = new UriBuilder("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest");
+            var queryString = HttpUtility.ParseQueryString(builder.Query);
+            queryString["start"] = "1";
+            queryString["limit"] = "5000";
+            queryString["convert"] = "USD";
+            builder.Query = queryString.ToString();
+            return await _client.GetAsync(builder.ToString());
+        }
+
+        // Convert price
+        public async Task<HttpResponseMessage> ConvertPrice(string symbol, int amount, string[] convertTypes)
         {
             UriBuilder builder = new UriBuilder("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest");
             var queryString = HttpUtility.ParseQueryString(builder.Query);

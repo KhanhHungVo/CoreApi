@@ -8,6 +8,6 @@ namespace CoreApi.ClientServices
 {
     public interface ICoinMarketCapClient
     {
-        Task<HttpResponseMessage> GetData();
+        Task<HttpResponseMessage> GetLatestData();
     }
 }

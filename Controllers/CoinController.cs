@@ -44,7 +44,7 @@ namespace CoreApi.Controllers
 
             //HttpResponseMessage responseMessage = await httpClient.GetAsync(builder.ToString());
 
-            HttpResponseMessage res = await _coinMarketClient.GetData();
+            HttpResponseMessage res = await _coinMarketClient.GetLatestData();
 
             // Serialize data
             if(res.IsSuccessStatusCode)
