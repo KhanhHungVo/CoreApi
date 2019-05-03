@@ -50,25 +50,26 @@ namespace CoreApi.Controllers
             if(res.IsSuccessStatusCode)
             {
                result = await res.Content.ReadAsStringAsync();
+               var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+                return Ok(resultData);
             }
-            var obj = JsonConvert.DeserializeObject<CoinMarketRes>(result);
-            return Ok(obj);
-     
+            return BadRequest(res);
         }
 
         [HttpGet("convert")]
         public async Task<ActionResult> ConvertPrice()
         {
             var result = "";
-            HttpResponseMessage res = await _coinMarketClient.ConvertPrice();
+            HttpResponseMessage res = await _coinMarketClient.ConvertPrice("BTC");
 
             // Serialize data
             if (res.IsSuccessStatusCode)
             {
                 result = await res.Content.ReadAsStringAsync();
+                var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+                return Ok(resultData);
             }
-            var obj = JsonConvert.DeserializeObject<object>(result);
-            return Ok(obj);
+            return BadRequest(res);
 
         }
     }

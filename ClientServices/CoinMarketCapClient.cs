@@ -33,13 +33,13 @@ namespace CoreApi.ClientServices
         }
 
         // Convert price
-        public async Task<HttpResponseMessage> ConvertPrice(string symbol = "BTC", int amount = 1, string convertTypes = "USD")
+        public async Task<HttpResponseMessage> ConvertPrice(string symbol, int amount, string convertTypes)
         {
             UriBuilder builder = new UriBuilder("https://pro-api.coinmarketcap.com/v1/tools/price-conversion");
             var queryString = HttpUtility.ParseQueryString(builder.Query);
-            queryString["amount"] = "1";
-            queryString["symbol"] = "ETH";
-            queryString["convert"] = "USD";
+            queryString["symbol"] = symbol;
+            queryString["amount"] = amount.ToString();
+            queryString["convert"] = convertTypes;
             builder.Query = queryString.ToString();
             return await _client.GetAsync(builder.ToString());
         }

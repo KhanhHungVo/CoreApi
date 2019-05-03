@@ -9,6 +9,6 @@ namespace CoreApi.ClientServices
     public interface ICoinMarketCapClient
     {
         Task<HttpResponseMessage> GetLatestData();
-        Task<HttpResponseMessage> ConvertPrice(string symbol = "BTC", int amount = 1, string convertTypes = "USD");
+        Task<HttpResponseMessage> ConvertPrice(string symbol, int amount = 1, string convertTypes = "USD");
     }
 }
