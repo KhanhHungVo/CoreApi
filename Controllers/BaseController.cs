@@ -7,5 +7,6 @@ namespace CoreApi.Controllers
 {
     public class BaseController
     {
+
     }
 }

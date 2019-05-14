@@ -57,7 +57,6 @@ namespace CoreApi.Controllers
             }
 
         }
-
         [HttpGet]
         public IActionResult GetAll()
         {

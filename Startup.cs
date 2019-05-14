@@ -22,6 +22,7 @@ namespace CoreApi
 {
     public class Startup
     {
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -74,9 +75,11 @@ namespace CoreApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
+            //loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            //loggerFactory.AddDebug();
 
+            loggerFactory.AddFile("Logs/mylog-{Date}.txt");
+            
             // global cors policy
             app.UseCors(x => x
                 .AllowAnyOrigin()
@@ -86,6 +89,17 @@ namespace CoreApi
 
             app.UseAuthentication();
             app.UseMvc();
+            // Custom routing 
+            /*  app.UseMvc(routes =>
+            {
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}")
+           .MapRoute(name: "api", template: "api/{controller}/{action}/{id?}");
+            });*/
+
+
+            //app.Run(async (context) => {
+            //    await context.Response.Body.WriteAsync(System.Diagnostics.Process.GetCurrentProcess().ProcessName);
+            //});
         }
     }
 }
