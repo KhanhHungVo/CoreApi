@@ -48,7 +48,7 @@ namespace CoreApi.Controllers
             {
                 // save 
                 _userService.Create(user, userDto.Password);
-                return Ok();
+                return Ok(user);
             }
             catch (AppException ex)
             {
