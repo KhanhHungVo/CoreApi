@@ -7,12 +7,12 @@ using System.Web;
 
 namespace CoreApi.ClientServices
 {
-    public class CoinMarketCapClient : ICoinMarketCapClient
+    public class CoinMarketCapService : ICoinMarketCapService
     {
         private static string API_KEY = "b447a55c-e07c-4926-92e7-80ecc22aa461";
         public HttpClient _client { get; private set; }
 
-        public CoinMarketCapClient(HttpClient httpClient)
+        public CoinMarketCapService(HttpClient httpClient)
         {
             httpClient.DefaultRequestHeaders.Accept.Clear();
             httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));

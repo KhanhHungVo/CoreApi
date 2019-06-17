@@ -20,8 +20,8 @@ namespace CoreApi.Controllers
     {
         //private static string API_KEY = "b447a55c-e07c-4926-92e7-80ecc22aa461";
         //public static HttpClient client = new HttpClient();
-        private readonly ICoinMarketCapClient _coinMarketClient;
-        public CoinController(ICoinMarketCapClient coinMarketClient)
+        private readonly ICoinMarketCapService _coinMarketClient;
+        public CoinController(ICoinMarketCapService coinMarketClient)
         {
             _coinMarketClient = coinMarketClient;
         }

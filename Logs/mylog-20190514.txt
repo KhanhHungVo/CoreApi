@@ -1,0 +1,380 @@
+2019-05-14T21:00:54.4326023+07:00 0HLMOEIAC2T5H:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/values   (ca22a1cb)
+2019-05-14T21:00:54.4326023+07:00 0HLMOEIAC2T5I:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55507/  0 (ca22a1cb)
+2019-05-14T21:00:54.4722868+07:00 0HLMOEIAC2T5I:00000001 [INF] Request finished in 87.1425ms 200  (791a596a)
+2019-05-14T21:00:54.6132548+07:00 0HLMOEIAC2T5H:00000001 [INF] Executing action method "CoreApi.Controllers.ValuesController.Get (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:00:54.6218191+07:00 0HLMOEIAC2T5H:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:00:54.6589934+07:00 0HLMOEIAC2T5H:00000001 [INF] Executed action "CoreApi.Controllers.ValuesController.Get (CoreApi)" in 51.5653ms (afa2e885)
+2019-05-14T21:00:54.6845360+07:00 0HLMOEIAC2T5H:00000001 [INF] Request finished in 300.0022ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:01:24.1211689+07:00 0HLMOEIAC2T5I:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/values   (ca22a1cb)
+2019-05-14T21:01:24.1466910+07:00 0HLMOEIAC2T5I:00000002 [INF] Executing action method "CoreApi.Controllers.ValuesController.Get (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:01:24.1700705+07:00 0HLMOEIAC2T5I:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:01:24.1943890+07:00 0HLMOEIAC2T5I:00000002 [INF] Executed action "CoreApi.Controllers.ValuesController.Get (CoreApi)" in 48.6071ms (afa2e885)
+2019-05-14T21:01:24.1989389+07:00 0HLMOEIAC2T5I:00000002 [INF] Request finished in 77.0023ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:05:39.6651388+07:00 0HLMOEKVC7ERH:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/values   (ca22a1cb)
+2019-05-14T21:05:39.6651388+07:00 0HLMOEKVC7ERG:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:55507/  0 (ca22a1cb)
+2019-05-14T21:05:39.7054147+07:00 0HLMOEKVC7ERG:00000001 [INF] Request finished in 94.1139ms 200  (791a596a)
+2019-05-14T21:05:39.8438850+07:00 0HLMOEKVC7ERH:00000001 [INF] Executing action method "CoreApi.Controllers.ValuesController.Get (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:05:39.8562667+07:00 0HLMOEKVC7ERH:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:05:39.9126066+07:00 0HLMOEKVC7ERH:00000001 [INF] Executed action "CoreApi.Controllers.ValuesController.Get (CoreApi)" in 73.4805ms (afa2e885)
+2019-05-14T21:05:39.9386600+07:00 0HLMOEKVC7ERH:00000001 [INF] Request finished in 327.4434ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:21:31.0208571+07:00 0HLMOETQTSG2L:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:21:31.0349333+07:00 0HLMOETQTSG2L:00000001 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:21:31.0370325+07:00 0HLMOETQTSG2L:00000001 [INF] Request finished in 29.5067ms 204  (791a596a)
+2019-05-14T21:21:31.0430833+07:00 0HLMOETQTSG2L:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:21:31.0432651+07:00 0HLMOETQTSG2L:00000002 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:21:31.1157138+07:00 0HLMOETQTSG2L:00000002 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:21:31'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:21:31.1178879+07:00 0HLMOETQTSG2L:00000002 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:21:31'." (48071232)
+2019-05-14T21:21:31.1471683+07:00 0HLMOETQTSG2L:00000002 [INF] Request finished in 104.1149ms 404  (791a596a)
+2019-05-14T21:22:03.6337029+07:00 0HLMOETQTSG2L:00000003 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:03.6338687+07:00 0HLMOETQTSG2L:00000003 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:03.6340501+07:00 0HLMOETQTSG2L:00000003 [INF] Request finished in 0.4194ms 204  (791a596a)
+2019-05-14T21:22:03.7103299+07:00 0HLMOETQTSG2L:00000004 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:03.7104120+07:00 0HLMOETQTSG2L:00000004 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:03.7140441+07:00 0HLMOETQTSG2L:00000004 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:03'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:22:03.7141970+07:00 0HLMOETQTSG2L:00000004 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:03'." (48071232)
+2019-05-14T21:22:03.7144398+07:00 0HLMOETQTSG2L:00000004 [INF] Request finished in 4.112ms 404  (791a596a)
+2019-05-14T21:22:05.1258612+07:00 0HLMOETQTSG2L:00000005 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:05.1259582+07:00 0HLMOETQTSG2L:00000005 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:05.1285409+07:00 0HLMOETQTSG2L:00000005 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:05'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:22:05.1286697+07:00 0HLMOETQTSG2L:00000005 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:05'." (48071232)
+2019-05-14T21:22:05.1288440+07:00 0HLMOETQTSG2L:00000005 [INF] Request finished in 2.9634ms 404  (791a596a)
+2019-05-14T21:22:33.3999761+07:00 0HLMOETQTSG2L:00000006 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:33.4000954+07:00 0HLMOETQTSG2L:00000006 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:33.4002221+07:00 0HLMOETQTSG2L:00000006 [INF] Request finished in 0.3321ms 204  (791a596a)
+2019-05-14T21:22:33.5129820+07:00 0HLMOETQTSG2L:00000007 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:33.5131259+07:00 0HLMOETQTSG2L:00000007 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:33.5172617+07:00 0HLMOETQTSG2L:00000007 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:33'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:22:33.5173824+07:00 0HLMOETQTSG2L:00000007 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:33'." (48071232)
+2019-05-14T21:22:33.5175155+07:00 0HLMOETQTSG2L:00000007 [INF] Request finished in 4.6576ms 404  (791a596a)
+2019-05-14T21:22:57.9883542+07:00 0HLMOETQTSG2L:00000008 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:57.9885175+07:00 0HLMOETQTSG2L:00000008 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:57.9886968+07:00 0HLMOETQTSG2L:00000008 [INF] Request finished in 0.4086ms 204  (791a596a)
+2019-05-14T21:22:58.0691356+07:00 0HLMOETQTSG2L:00000009 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:22:58.0692340+07:00 0HLMOETQTSG2L:00000009 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:22:58.0717254+07:00 0HLMOETQTSG2L:00000009 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:58'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:22:58.0718399+07:00 0HLMOETQTSG2L:00000009 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:22:58'." (48071232)
+2019-05-14T21:22:58.0719889+07:00 0HLMOETQTSG2L:00000009 [INF] Request finished in 2.9118ms 404  (791a596a)
+2019-05-14T21:23:02.4654669+07:00 0HLMOETQTSG2L:0000000A [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:02.4656139+07:00 0HLMOETQTSG2L:0000000A [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:02.4657493+07:00 0HLMOETQTSG2L:0000000A [INF] Request finished in 0.3831ms 204  (791a596a)
+2019-05-14T21:23:02.5467097+07:00 0HLMOETQTSG2L:0000000B [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:02.5468157+07:00 0HLMOETQTSG2L:0000000B [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:02.5492591+07:00 0HLMOETQTSG2L:0000000B [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:02'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:23:02.5493508+07:00 0HLMOETQTSG2L:0000000B [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:02'." (48071232)
+2019-05-14T21:23:02.5494712+07:00 0HLMOETQTSG2L:0000000B [INF] Request finished in 2.7996ms 404  (791a596a)
+2019-05-14T21:23:16.6517421+07:00 0HLMOETQTSG2L:0000000C [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:16.6518614+07:00 0HLMOETQTSG2L:0000000C [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:16.6520339+07:00 0HLMOETQTSG2L:0000000C [INF] Request finished in 0.6586ms 204  (791a596a)
+2019-05-14T21:23:16.7129079+07:00 0HLMOETQTSG2L:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:16.7130441+07:00 0HLMOETQTSG2L:0000000D [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:16.7157205+07:00 0HLMOETQTSG2L:0000000D [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:16'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:23:16.7158021+07:00 0HLMOETQTSG2L:0000000D [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:16'." (48071232)
+2019-05-14T21:23:16.7159425+07:00 0HLMOETQTSG2L:0000000D [INF] Request finished in 3.1026ms 404  (791a596a)
+2019-05-14T21:23:26.7736139+07:00 0HLMOETQTSG2L:0000000E [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/values   (ca22a1cb)
+2019-05-14T21:23:26.8589403+07:00 0HLMOETQTSG2L:0000000E [INF] Executing action method "CoreApi.Controllers.ValuesController.Get (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:23:26.8695091+07:00 0HLMOETQTSG2L:0000000E [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:23:26.8983578+07:00 0HLMOETQTSG2L:0000000E [INF] Executed action "CoreApi.Controllers.ValuesController.Get (CoreApi)" in 64.3805ms (afa2e885)
+2019-05-14T21:23:26.8997509+07:00 0HLMOETQTSG2L:0000000E [INF] Request finished in 126.167ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:23:35.5732056+07:00 0HLMOETQTSG2L:0000000F [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:35.5975828+07:00 0HLMOETQTSG2L:0000000F [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:35.6222381+07:00 0HLMOETQTSG2L:0000000F [INF] Request finished in 30.4311ms 204  (791a596a)
+2019-05-14T21:23:35.6661168+07:00 0HLMOETQTSG2L:00000010 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:35.6700868+07:00 0HLMOETQTSG2L:00000010 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:35.6795830+07:00 0HLMOETQTSG2L:00000010 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:35'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:23:35.7033925+07:00 0HLMOETQTSG2L:00000010 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:35'." (48071232)
+2019-05-14T21:23:35.7275264+07:00 0HLMOETQTSG2L:00000010 [INF] Request finished in 60.7362ms 404  (791a596a)
+2019-05-14T21:23:42.5161699+07:00 0HLMOETQTSG2L:00000011 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:42.5418635+07:00 0HLMOETQTSG2L:00000011 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:42.5664640+07:00 0HLMOETQTSG2L:00000011 [INF] Request finished in 30.5476ms 204  (791a596a)
+2019-05-14T21:23:42.5972204+07:00 0HLMOETQTSG2L:00000012 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:23:42.6234277+07:00 0HLMOETQTSG2L:00000012 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:23:42.6304943+07:00 0HLMOETQTSG2L:00000012 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:42'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:23:42.6342816+07:00 0HLMOETQTSG2L:00000012 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:23:42'." (48071232)
+2019-05-14T21:23:42.6619301+07:00 0HLMOETQTSG2L:00000012 [INF] Request finished in 41.3445ms 404  (791a596a)
+2019-05-14T21:25:09.1246749+07:00 0HLMOETQTSG2M:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:25:09.1292636+07:00 0HLMOETQTSG2M:00000001 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:25:09.1351316+07:00 0HLMOETQTSG2M:00000001 [INF] Request finished in 18.5183ms 204  (791a596a)
+2019-05-14T21:25:09.1920514+07:00 0HLMOETQTSG2M:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:25:09.2166851+07:00 0HLMOETQTSG2M:00000002 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:25:09.2239926+07:00 0HLMOETQTSG2M:00000002 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:25:09'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:25:09.2477027+07:00 0HLMOETQTSG2M:00000002 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:25:09'." (48071232)
+2019-05-14T21:25:09.2544876+07:00 0HLMOETQTSG2M:00000002 [INF] Request finished in 65.2507ms 404  (791a596a)
+2019-05-14T21:26:14.2425157+07:00 0HLMOETQTSG2N:00000001 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:26:14.2671001+07:00 0HLMOETQTSG2N:00000001 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:26:14.2921164+07:00 0HLMOETQTSG2N:00000001 [INF] Request finished in 28.285ms 204  (791a596a)
+2019-05-14T21:26:28.0225919+07:00 0HLMOETQTSG2N:00000002 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:26:28.0267442+07:00 0HLMOETQTSG2N:00000002 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:26:28.0314716+07:00 0HLMOETQTSG2N:00000002 [INF] Request finished in 28.3856ms 204  (791a596a)
+2019-05-14T21:26:28.1169177+07:00 0HLMOETQTSG2N:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:26:28.1420254+07:00 0HLMOETQTSG2N:00000003 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:26:28.1491812+07:00 0HLMOETQTSG2N:00000003 [INF] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTYzNzgyNjgsImV4cCI6MTU1Njk4MzA2OCwiaWF0IjoxNTU2Mzc4MjY4fQ.FmX6FALlv2_Ti5MiyzrZcMI57kXvE9Fp-XT7UtRXA0c". (f3081a27)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:26:28'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2019-05-14T21:26:28.1729363+07:00 0HLMOETQTSG2N:00000003 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '05/04/2019 15:17:48'
+Current time: '05/14/2019 14:26:28'." (48071232)
+2019-05-14T21:26:28.1795319+07:00 0HLMOETQTSG2N:00000003 [INF] Request finished in 59.248ms 404  (791a596a)
+2019-05-14T21:26:44.1081009+07:00 0HLMOETQTSG2N:00000004 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/api/users/authenticate   (ca22a1cb)
+2019-05-14T21:26:44.1329506+07:00 0HLMOETQTSG2N:00000004 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:26:44.1575503+07:00 0HLMOETQTSG2N:00000004 [INF] Request finished in 29.3548ms 204  (791a596a)
+2019-05-14T21:26:44.1835059+07:00 0HLMOETQTSG2N:00000005 [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/authenticate application/json 39 (ca22a1cb)
+2019-05-14T21:26:44.2075062+07:00 0HLMOETQTSG2N:00000005 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:26:44.4976940+07:00 0HLMOETQTSG2N:00000005 [INF] Executing action method "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" with arguments (["CoreApi.DTOs.UserDTO"]) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:26:51.1230564+07:00 0HLMOETQTSG2N:00000005 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:26:51.3404731+07:00 0HLMOETQTSG2N:00000005 [INF] Executed DbCommand ("34"ms) [Parameters=["@__username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[FirstName], [x].[LastName], [x].[Password], [x].[PasswordHash], [x].[PasswordSalt], [x].[Token], [x].[Username]
+FROM [Users] AS [x]
+WHERE [x].[Username] = @__username_0" (0723d8ff)
+2019-05-14T21:26:54.3235163+07:00 0HLMOETQTSG2N:00000005 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:26:54.3308249+07:00 0HLMOETQTSG2N:00000005 [INF] Executed action "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" in 10106.9402ms (afa2e885)
+2019-05-14T21:26:54.3382745+07:00 0HLMOETQTSG2N:00000005 [INF] Request finished in 10153.267ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:27:35.7676640+07:00 0HLMOETQTSG2N:00000006 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/api/users/authenticate   (ca22a1cb)
+2019-05-14T21:27:35.7714582+07:00 0HLMOETQTSG2N:00000006 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:27:35.7967688+07:00 0HLMOETQTSG2N:00000006 [INF] Request finished in 30.0843ms 204  (791a596a)
+2019-05-14T21:27:35.8215559+07:00 0HLMOETQTSG2N:00000007 [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/authenticate application/json 34 (ca22a1cb)
+2019-05-14T21:27:35.8466743+07:00 0HLMOETQTSG2N:00000007 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:27:35.8578182+07:00 0HLMOETQTSG2N:00000007 [INF] Executing action method "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" with arguments (["CoreApi.DTOs.UserDTO"]) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:27:38.2090326+07:00 0HLMOETQTSG2N:00000007 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:27:38.2168262+07:00 0HLMOETQTSG2N:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[FirstName], [x].[LastName], [x].[Password], [x].[PasswordHash], [x].[PasswordSalt], [x].[Token], [x].[Username]
+FROM [Users] AS [x]
+WHERE [x].[Username] = @__username_0" (0723d8ff)
+2019-05-14T21:27:49.1601101+07:00 0HLMOETQTSG2N:00000007 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:27:49.1858663+07:00 0HLMOETQTSG2N:00000007 [INF] Executed action "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" in 13313.3298ms (afa2e885)
+2019-05-14T21:27:49.1902815+07:00 0HLMOETQTSG2N:00000007 [INF] Request finished in 13387.605ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:28:41.6164140+07:00 0HLMOETQTSG2N:00000008 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/api/users/authenticate   (ca22a1cb)
+2019-05-14T21:28:41.6407042+07:00 0HLMOETQTSG2N:00000008 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:28:41.6455246+07:00 0HLMOETQTSG2N:00000008 [INF] Request finished in 27.6936ms 204  (791a596a)
+2019-05-14T21:28:41.6514039+07:00 0HLMOETQTSG2N:00000009 [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/authenticate application/json 34 (ca22a1cb)
+2019-05-14T21:28:41.6757781+07:00 0HLMOETQTSG2N:00000009 [INF] Policy execution successful. (0204925d)
+2019-05-14T21:28:41.6987053+07:00 0HLMOETQTSG2N:00000009 [INF] Executing action method "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" with arguments (["CoreApi.DTOs.UserDTO"]) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:28:54.9701898+07:00 0HLMOETQTSG2N:00000009 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:28:55.7447800+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:28:55.7840336+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:28:55.8066986+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:29:03.2167755+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[FirstName], [x].[LastName], [x].[Password], [x].[PasswordHash], [x].[PasswordSalt], [x].[Token], [x].[Username]
+FROM [Users] AS [x]
+WHERE [x].[Username] = @__username_0" (0723d8ff)
+2019-05-14T21:29:15.8544196+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:29:15.8689462+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:29:15.8875208+07:00 0HLMOETQTSG2N:00000009 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:29:21.5984368+07:00 0HLMOETQTSG2N:00000009 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:29:21.6042510+07:00 0HLMOETQTSG2N:00000009 [INF] Executed action "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" in 39922.6082ms (afa2e885)
+2019-05-14T21:29:21.6109295+07:00 0HLMOETQTSG2N:00000009 [INF] Request finished in 39956.5834ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:29:25.2148305+07:00 0HLMOETQTSG2N:0000000A [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/api/users/authenticate   (ca22a1cb)
+2019-05-14T21:29:25.2397123+07:00 0HLMOETQTSG2N:0000000A [INF] Policy execution successful. (0204925d)
+2019-05-14T21:29:25.2637165+07:00 0HLMOETQTSG2N:0000000A [INF] Request finished in 49.3331ms 204  (791a596a)
+2019-05-14T21:29:25.2891086+07:00 0HLMOETQTSG2N:0000000B [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/authenticate application/json 31 (ca22a1cb)
+2019-05-14T21:29:25.3126716+07:00 0HLMOETQTSG2N:0000000B [INF] Policy execution successful. (0204925d)
+2019-05-14T21:29:25.3362209+07:00 0HLMOETQTSG2N:0000000B [INF] Executing action method "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" with arguments (["CoreApi.DTOs.UserDTO"]) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:29:27.4754683+07:00 0HLMOETQTSG2N:0000000B [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:29:27.5019776+07:00 0HLMOETQTSG2N:0000000B [INF] Executed DbCommand ("0"ms) [Parameters=["@__username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Id], [x].[FirstName], [x].[LastName], [x].[Password], [x].[PasswordHash], [x].[PasswordSalt], [x].[Token], [x].[Username]
+FROM [Users] AS [x]
+WHERE [x].[Username] = @__username_0" (0723d8ff)
+2019-05-14T21:29:27.5317267+07:00 0HLMOETQTSG2N:0000000B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:29:27.5595648+07:00 0HLMOETQTSG2N:0000000B [INF] Executed action "CoreApi.Controllers.UsersController.Authenticate (CoreApi)" in 2222.1576ms (afa2e885)
+2019-05-14T21:29:27.5857438+07:00 0HLMOETQTSG2N:0000000B [INF] Request finished in 2294.1058ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:29:30.2991485+07:00 0HLMOETQTSG2N:0000000C [INF] Request starting HTTP/1.1 OPTIONS http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:29:30.3040186+07:00 0HLMOETQTSG2N:0000000C [INF] Policy execution successful. (0204925d)
+2019-05-14T21:29:30.3316214+07:00 0HLMOETQTSG2N:0000000C [INF] Request finished in 10.4088ms 204  (791a596a)
+2019-05-14T21:29:30.3398192+07:00 0HLMOETQTSG2N:0000000D [INF] Request starting HTTP/1.1 GET http://localhost:55507/users   (ca22a1cb)
+2019-05-14T21:29:30.3467461+07:00 0HLMOETQTSG2N:0000000D [INF] Policy execution successful. (0204925d)
+2019-05-14T21:29:30.3526509+07:00 0HLMOETQTSG2N:0000000D [INF] Successfully validated the token. (60169667)
+2019-05-14T21:29:30.3779608+07:00 0HLMOETQTSG2N:0000000D [INF] AuthenticationScheme: "Bearer" was successfully authenticated. (1805f3b3)
+2019-05-14T21:29:30.3877559+07:00 0HLMOETQTSG2N:0000000D [INF] Request finished in 44.6208ms 404  (791a596a)
+2019-05-14T21:30:32.3380362+07:00 0HLMOETQTSG2O:00000001 [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/ application/json 51 (ca22a1cb)
+2019-05-14T21:30:32.3623379+07:00 0HLMOETQTSG2O:00000001 [INF] Request finished in 3.867ms 404  (791a596a)
+2019-05-14T21:30:46.7722656+07:00 0HLMOETQTSG2O:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users/ application/json  (ca22a1cb)
+2019-05-14T21:30:46.8006677+07:00 0HLMOETQTSG2O:00000002 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:30:46.8260504+07:00 0HLMOETQTSG2O:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:30:46.8293878+07:00 0HLMOETQTSG2O:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:30:46.8553234+07:00 0HLMOETQTSG2O:00000002 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:30:46.8782876+07:00 0HLMOETQTSG2O:00000002 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 81.7302ms (afa2e885)
+2019-05-14T21:30:46.9028645+07:00 0HLMOETQTSG2O:00000002 [INF] Request finished in 109.4817ms 401  (791a596a)
+2019-05-14T21:31:49.7295218+07:00 0HLMOETQTSG2P:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users/ application/json  (ca22a1cb)
+2019-05-14T21:31:49.7537981+07:00 0HLMOETQTSG2P:00000001 [INF] "Bearer" was not authenticated. Failure message: "No SecurityTokenValidator available for token: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTc4NDQxNjcsImV4cCI6MTU1ODQ0ODk2NywiaWF0IjoxNTU3ODQ0MTY3fQ.sxHtGdq14pd-5d3_UcXODy60x1c3wly4O_tvS-q0M3A\",\"passwordHash\":\"oRe1UbHwrXa7UbB1ipCUmAryZPzO13ngPWxKzW457UiZujyLEJC6KUULdLNq4tWvlYv8QZhnJhWUiOJHHQmVjQ==\",\"passwordSalt\":\"Wyfkg211yhwiE+ASmbOiktjam+osr5o6uyu06VgsWOtHoG80J2gHjGmn3R9jtzuQlV2CY2VYjSF0gnPi7kSe+U1iripc7jd/5rB/5XlDd3sHgKXrKAV7Gndb1lV6wNYTUVnD9LiCNzO/HwPAwoHrua1yDdEzFZs7aA64J4eSmmU=" (48071232)
+2019-05-14T21:31:49.7775930+07:00 0HLMOETQTSG2P:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:31:49.8003064+07:00 0HLMOETQTSG2P:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:31:49.8233092+07:00 0HLMOETQTSG2P:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:31:49.8475921+07:00 0HLMOETQTSG2P:00000001 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:31:49.8721379+07:00 0HLMOETQTSG2P:00000001 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 93.6751ms (afa2e885)
+2019-05-14T21:31:49.8963682+07:00 0HLMOETQTSG2P:00000001 [INF] Request finished in 166.3626ms 401  (791a596a)
+2019-05-14T21:34:07.8877329+07:00 0HLMOETQTSG2Q:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users/ application/json  (ca22a1cb)
+2019-05-14T21:34:07.8916116+07:00 0HLMOETQTSG2Q:00000001 [INF] "Bearer" was not authenticated. Failure message: "No SecurityTokenValidator available for token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTc4NDQxNjcsImV4cCI6MTU1ODQ0ODk2NywiaWF0IjoxNTU3ODQ0MTY3fQ.sxHtGdq14pd-5d3_UcXODy60x1c3wly4O_tvS-q0M3A\",\"passwordHash\":\"oRe1UbHwrXa7UbB1ipCUmAryZPzO13ngPWxKzW457UiZujyLEJC6KUULdLNq4tWvlYv8QZhnJhWUiOJHHQmVjQ==\",\"passwordSalt\":\"Wyfkg211yhwiE+ASmbOiktjam+osr5o6uyu06VgsWOtHoG80J2gHjGmn3R9jtzuQlV2CY2VYjSF0gnPi7kSe+U1iripc7jd/5rB/5XlDd3sHgKXrKAV7Gndb1lV6wNYTUVnD9LiCNzO/HwPAwoHrua1yDdEzFZs7aA64J4eSmmU=" (48071232)
+2019-05-14T21:34:07.9159593+07:00 0HLMOETQTSG2Q:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:34:07.9397468+07:00 0HLMOETQTSG2Q:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:34:07.9639355+07:00 0HLMOETQTSG2Q:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:34:07.9874041+07:00 0HLMOETQTSG2Q:00000001 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:34:07.9908970+07:00 0HLMOETQTSG2Q:00000001 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 95.6603ms (afa2e885)
+2019-05-14T21:34:08.0140577+07:00 0HLMOETQTSG2Q:00000001 [INF] Request finished in 106.584ms 401  (791a596a)
+2019-05-14T21:34:32.7101994+07:00 0HLMOETQTSG2Q:00000002 [INF] Request starting HTTP/1.1 POST http://localhost:55507/api/users/create application/json 76 (ca22a1cb)
+2019-05-14T21:34:32.7187238+07:00 0HLMOETQTSG2Q:00000002 [INF] Executing action method "CoreApi.Controllers.UsersController.Create (CoreApi)" with arguments (["CoreApi.DTOs.UserDTO"]) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:34:32.7574098+07:00 0HLMOETQTSG2Q:00000002 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:34:32.7789935+07:00 0HLMOETQTSG2Q:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Username_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [x]
+        WHERE [x].[Username] = @__user_Username_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END" (0723d8ff)
+2019-05-14T21:34:32.8414255+07:00 0HLMOETQTSG2Q:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:34:32.8703869+07:00 0HLMOETQTSG2Q:00000002 [INF] Executed action "CoreApi.Controllers.UsersController.Create (CoreApi)" in 129.7256ms (afa2e885)
+2019-05-14T21:34:32.8987980+07:00 0HLMOETQTSG2Q:00000002 [INF] Request finished in 184.7475ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:35:27.9959685+07:00 0HLMOETQTSG2Q:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users application/json  (ca22a1cb)
+2019-05-14T21:35:28.0192076+07:00 0HLMOETQTSG2Q:00000003 [INF] "Bearer" was not authenticated. Failure message: "No SecurityTokenValidator available for token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTc4NDQxNjcsImV4cCI6MTU1ODQ0ODk2NywiaWF0IjoxNTU3ODQ0MTY3fQ.sxHtGdq14pd-5d3_UcXODy60x1c3wly4O_tvS-q0M3A\",\"passwordHash\":\"oRe1UbHwrXa7UbB1ipCUmAryZPzO13ngPWxKzW457UiZujyLEJC6KUULdLNq4tWvlYv8QZhnJhWUiOJHHQmVjQ==\",\"passwordSalt\":\"Wyfkg211yhwiE+ASmbOiktjam+osr5o6uyu06VgsWOtHoG80J2gHjGmn3R9jtzuQlV2CY2VYjSF0gnPi7kSe+U1iripc7jd/5rB/5XlDd3sHgKXrKAV7Gndb1lV6wNYTUVnD9LiCNzO/HwPAwoHrua1yDdEzFZs7aA64J4eSmmU=" (48071232)
+2019-05-14T21:35:28.0226890+07:00 0HLMOETQTSG2Q:00000003 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:35:28.0451305+07:00 0HLMOETQTSG2Q:00000003 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:35:28.0478279+07:00 0HLMOETQTSG2Q:00000003 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:35:28.0724640+07:00 0HLMOETQTSG2Q:00000003 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:35:28.0965123+07:00 0HLMOETQTSG2Q:00000003 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 52.8452ms (afa2e885)
+2019-05-14T21:35:28.0994943+07:00 0HLMOETQTSG2Q:00000003 [INF] Request finished in 123.665ms 401  (791a596a)
+2019-05-14T21:35:45.7716194+07:00 0HLMOF5PLEGRK:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users application/json  (ca22a1cb)
+2019-05-14T21:35:45.7999438+07:00 0HLMOF5PLEGRK:00000001 [INF] "Bearer" was not authenticated. Failure message: "No SecurityTokenValidator available for token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1NTc4NDQxNjcsImV4cCI6MTU1ODQ0ODk2NywiaWF0IjoxNTU3ODQ0MTY3fQ.sxHtGdq14pd-5d3_UcXODy60x1c3wly4O_tvS-q0M3A\",\"passwordHash\":\"oRe1UbHwrXa7UbB1ipCUmAryZPzO13ngPWxKzW457UiZujyLEJC6KUULdLNq4tWvlYv8QZhnJhWUiOJHHQmVjQ==\",\"passwordSalt\":\"Wyfkg211yhwiE+ASmbOiktjam+osr5o6uyu06VgsWOtHoG80J2gHjGmn3R9jtzuQlV2CY2VYjSF0gnPi7kSe+U1iripc7jd/5rB/5XlDd3sHgKXrKAV7Gndb1lV6wNYTUVnD9LiCNzO/HwPAwoHrua1yDdEzFZs7aA64J4eSmmU=" (48071232)
+2019-05-14T21:35:45.8539924+07:00 0HLMOF5PLEGRK:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:35:45.8565232+07:00 0HLMOF5PLEGRK:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:35:45.8593923+07:00 0HLMOF5PLEGRK:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:35:45.8628030+07:00 0HLMOF5PLEGRK:00000001 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:35:45.8651912+07:00 0HLMOF5PLEGRK:00000001 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 14.0613ms (afa2e885)
+2019-05-14T21:35:45.8667423+07:00 0HLMOF5PLEGRK:00000001 [INF] Request finished in 107.9204ms 401  (791a596a)
+2019-05-14T21:35:56.8382167+07:00 0HLMOF5PLEGRK:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users application/json  (ca22a1cb)
+2019-05-14T21:35:56.8392790+07:00 0HLMOF5PLEGRK:00000002 [INF] Authorization failed for user: null. (a4ab1676)
+2019-05-14T21:35:56.8393645+07:00 0HLMOF5PLEGRK:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2019-05-14T21:35:56.8394777+07:00 0HLMOF5PLEGRK:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2019-05-14T21:35:56.8396754+07:00 0HLMOF5PLEGRK:00000002 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2019-05-14T21:35:56.8397614+07:00 0HLMOF5PLEGRK:00000002 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 0.7424ms (afa2e885)
+2019-05-14T21:35:56.8399332+07:00 0HLMOF5PLEGRK:00000002 [INF] Request finished in 1.7919ms 401  (791a596a)
+2019-05-14T21:36:09.6920716+07:00 0HLMOF60PIRE5:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/users application/json  (ca22a1cb)
+2019-05-14T21:36:09.9388479+07:00 0HLMOF60PIRE5:00000001 [INF] Executing action method "CoreApi.Controllers.UsersController.GetAll (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:36:10.0126266+07:00 0HLMOF60PIRE5:00000001 [INF] Entity Framework Core "2.0.3-rtm-10026" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2019-05-14T21:36:10.0941420+07:00 0HLMOF60PIRE5:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[FirstName], [u].[LastName], [u].[Password], [u].[PasswordHash], [u].[PasswordSalt], [u].[Token], [u].[Username]
+FROM [Users] AS [u]" (0723d8ff)
+2019-05-14T21:36:10.1136595+07:00 0HLMOF60PIRE5:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:36:10.1418031+07:00 0HLMOF60PIRE5:00000001 [INF] Executed action "CoreApi.Controllers.UsersController.GetAll (CoreApi)" in 384.1666ms (afa2e885)
+2019-05-14T21:36:10.1424987+07:00 0HLMOF60PIRE5:00000001 [INF] Request finished in 462.6672ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-14T21:36:57.1447659+07:00 0HLMOF6EU3PKR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:55507/api/values   (ca22a1cb)
+2019-05-14T21:36:57.2149144+07:00 0HLMOF6EU3PKR:00000001 [INF] Executing action method "CoreApi.Controllers.ValuesController.Get (CoreApi)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2019-05-14T21:36:57.2187982+07:00 0HLMOF6EU3PKR:00000001 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2019-05-14T21:36:57.2404995+07:00 0HLMOF6EU3PKR:00000001 [INF] Executed action "CoreApi.Controllers.ValuesController.Get (CoreApi)" in 29.6033ms (afa2e885)
+2019-05-14T21:36:57.2415346+07:00 0HLMOF6EU3PKR:00000001 [INF] Request finished in 109.7697ms 200 application/json; charset=utf-8 (791a596a)

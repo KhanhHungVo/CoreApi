@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoreApi.ClientServices
 {
-    public interface ICoinMarketCapClient
+    interface IBinanceService
     {
         Task<HttpResponseMessage> GetData();
     }
