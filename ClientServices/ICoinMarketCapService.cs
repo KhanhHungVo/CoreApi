@@ -8,7 +8,8 @@ namespace CoreApi.ClientServices
 {
     public interface ICoinMarketCapService
     {
-        Task<HttpResponseMessage> GetData();
+        Task<HttpResponseMessage> GetLatestData();
+        Task<HttpResponseMessage> ConvertPrice(string symbol, int amount, string convertTypes);
 
 
     }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoreApi.Controllers
+namespace CoreApi.Services
 {
-    public class BaseController
+    public class CoinService
     {
 
     }

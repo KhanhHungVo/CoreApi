@@ -17,7 +17,7 @@ namespace CoreApi.ClientServices
             httpClient.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", API_KEY);
             _client = httpClient;
         }
-        public Task<HttpResponseMessage> GetData()
+        public Task<HttpResponseMessage> GetLatestData()
         {
 
             throw new NotImplementedException();

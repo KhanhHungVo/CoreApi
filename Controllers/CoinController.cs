@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using CoreApi.ClientServices;
+using CoreApi.DTOs.CoinMarketResModels;
 using CoreApi.Entities;
 using CoreApi.Helper;
 using Microsoft.AspNetCore.Http;
@@ -43,22 +44,39 @@ namespace CoreApi.Controllers
 
             //HttpResponseMessage responseMessage = await httpClient.GetAsync(builder.ToString());
 
-            HttpResponseMessage res = await _coinMarketClient.GetData();
+            HttpResponseMessage res = await _coinMarketClient.GetLatestData();
+
+            // Serialize data
+            if (res.IsSuccessStatusCode)
+            {
+               result = await res.Content.ReadAsStringAsync();
+               var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+                return Ok(resultData);
+            }
+            return BadRequest(res);
+        }
+
+        [HttpGet("convert")]
+        public async Task<ActionResult> ConvertPrice()
+        {
+            var result = "";
+            HttpResponseMessage res = await _coinMarketClient.ConvertPrice("BTC",20,"USD");
 
             // Serialize data
             if (res.IsSuccessStatusCode)
             {
                 result = await res.Content.ReadAsStringAsync();
+                var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+                return Ok(resultData);
             }
-            var obj = JsonConvert.DeserializeObject<object>(result);
-            return Ok(obj);
+            return BadRequest(res);
 
         }
 
         public async Task<ActionResult> GetListPriceOnly()
         {
             var result = "";
-            HttpResponseMessage res = await _coinMarketClient.GetData();
+            HttpResponseMessage res = await _coinMarketClient.GetLatestData();
 
             // Serialize data
             if (res.IsSuccessStatusCode)

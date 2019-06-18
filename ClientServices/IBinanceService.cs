@@ -8,6 +8,6 @@ namespace CoreApi.ClientServices
 {
     interface IBinanceService
     {
-        Task<HttpResponseMessage> GetData();
+        Task<HttpResponseMessage> GetLatestData();
     }
 }
