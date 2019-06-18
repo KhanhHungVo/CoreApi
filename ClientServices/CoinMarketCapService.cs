@@ -7,16 +7,15 @@ using System.Web;
 
 namespace CoreApi.ClientServices
 {
-    public class CoinMarketCapService : ICoinMarketCapService
+    public class CoinMarketCapService : BaseHttpClientService, ICoinMarketCapService
     {
-        private static string API_KEY = "b447a55c-e07c-4926-92e7-80ecc22aa461";
-        public HttpClient _client { get; private set; }
+        private string _apiKey = "b447a55c-e07c-4926-92e7-80ecc22aa461";
 
-        public CoinMarketCapService(HttpClient httpClient)
+        private HttpClient _client { get; set; }
+
+        public CoinMarketCapService(HttpClient httpClient) : base(httpClient)
         {
-            httpClient.DefaultRequestHeaders.Accept.Clear();
-            httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            httpClient.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", API_KEY);
+            httpClient.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", _apiKey);
             _client = httpClient;
         }
 
@@ -30,5 +29,6 @@ namespace CoreApi.ClientServices
             builder.Query = queryString.ToString();
             return await _client.GetAsync(builder.ToString());
         }
+
     }
 }

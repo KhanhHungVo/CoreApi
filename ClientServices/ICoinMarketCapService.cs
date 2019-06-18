@@ -9,5 +9,7 @@ namespace CoreApi.ClientServices
     public interface ICoinMarketCapService
     {
         Task<HttpResponseMessage> GetData();
+
+
     }
 }

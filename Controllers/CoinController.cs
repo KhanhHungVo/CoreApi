@@ -46,13 +46,27 @@ namespace CoreApi.Controllers
             HttpResponseMessage res = await _coinMarketClient.GetData();
 
             // Serialize data
-            if(res.IsSuccessStatusCode)
+            if (res.IsSuccessStatusCode)
             {
-               result = await res.Content.ReadAsStringAsync();
+                result = await res.Content.ReadAsStringAsync();
             }
             var obj = JsonConvert.DeserializeObject<object>(result);
             return Ok(obj);
-     
+
+        }
+
+        public async Task<ActionResult> GetListPriceOnly()
+        {
+            var result = "";
+            HttpResponseMessage res = await _coinMarketClient.GetData();
+
+            // Serialize data
+            if (res.IsSuccessStatusCode)
+            {
+                result = await res.Content.ReadAsStringAsync();
+            }
+            var obj = JsonConvert.DeserializeObject<object>(result);
+            return Ok(obj);
         }
     }
 }
