@@ -42,5 +42,10 @@ namespace CoreApi.ClientServices
             builder.Query = queryString.ToString();
             return await _client.GetAsync(builder.ToString());
         }
+
+        //public async Task<HttpResponseMessage> GetTop10Coins()
+        //{
+
+        //}
     }
 }

@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using CoreApi.ClientServices;
+using CoreApi.DTOs;
 using CoreApi.DTOs.CoinMarketResModels;
 using CoreApi.Entities;
 using CoreApi.Helper;
@@ -30,7 +31,6 @@ namespace CoreApi.Controllers
         [HttpGet]
         public async Task<ActionResult> Test()
         {
-            var result = "";
             //UriBuilder builder = new UriBuilder("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest");
             //var queryString =  HttpUtility.ParseQueryString(builder.Query);
             //queryString["start"] = "1";
@@ -49,8 +49,9 @@ namespace CoreApi.Controllers
             // Serialize data
             if (res.IsSuccessStatusCode)
             {
-               result = await res.Content.ReadAsStringAsync();
+               var result = await res.Content.ReadAsStringAsync();
                var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+                
                 return Ok(resultData);
             }
             return BadRequest(res);
@@ -73,18 +74,35 @@ namespace CoreApi.Controllers
 
         }
 
-        public async Task<ActionResult> GetListPriceOnly()
+
+        [HttpGet("GetTopCoins")]
+        public async Task<ActionResult> GetTopCoins()
         {
-            var result = "";
             HttpResponseMessage res = await _coinMarketClient.GetLatestData();
 
             // Serialize data
             if (res.IsSuccessStatusCode)
             {
-                result = await res.Content.ReadAsStringAsync();
+                var result = await res.Content.ReadAsStringAsync();
+                var resultData = JsonConvert.DeserializeObject<CoinMarketRes>(result);
+
+                List<CoinDTO> lTopCoins = new List<CoinDTO>();
+                var top100CoinCMCRank = resultData.data.Take(100);
+                foreach(var item in top100CoinCMCRank)
+                {
+                    lTopCoins.Add(new CoinDTO
+                    {
+                        Symbol= item.symbol,
+                        Name = item.name,
+                        Price = item.quote.USD.price,
+                        PercentChange24h = item.quote.USD.percent_change_24h,
+                        Rank = item.cmc_rank
+                    });
+                }
+
+                return Ok(lTopCoins.OrderByDescending(x => x.PercentChange24h).Take(20));
             }
-            var obj = JsonConvert.DeserializeObject<object>(result);
-            return Ok(obj);
+            return BadRequest(res);
         }
     }
 }
