@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CoreApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [Authorize]
     public class UsersController : ControllerBase
     {

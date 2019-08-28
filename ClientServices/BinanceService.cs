@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace CoreApi.ClientServices
 {
-    public class BinanceService : IBinanceService
+    public class BinanceService : BaseHttpClientService, IBinanceService
     {
         private static string API_KEY = "";
         public HttpClient _client { get; private set; }
-        public BinanceService(HttpClient httpClient)
+        public BinanceService(HttpClient httpClient): base(httpClient)
         {
-            httpClient.DefaultRequestHeaders.Accept.Clear();
-            httpClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             httpClient.DefaultRequestHeaders.Add("X-CMC_PRO_API_KEY", API_KEY);
             _client = httpClient;
         }

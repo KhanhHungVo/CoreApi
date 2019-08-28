@@ -100,7 +100,7 @@ namespace CoreApi.Controllers
                     });
                 }
 
-                return Ok(lTopCoins.OrderByDescending(x => x.PercentChange24h).Take(20));
+                return Ok(lTopCoins.OrderByDescending(x => x.PercentChange24h));
             }
             return BadRequest(res);
         }
